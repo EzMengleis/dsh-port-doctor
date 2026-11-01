@@ -1,0 +1,13 @@
+# dsh-port-doctor 作为 profile 层的补丁：把本插件（lib/index.js）插进 loader 行列表。
+#
+# 本文件由 package.json 的 dsh.bundle.patch 声明，不是 profile 自己那份
+# cordis.patch.yml。安装进 profile 后（dsh plugin --profile web add ...），
+# profile 的 package.json 会把它计入 dsh.profile.bundles，随 profile 每次启动生效。
+
+- insert:
+    - id: port-doctor
+      name: dsh-port-doctor
+      # 可选：部署级默认值（工具参数优先，其次这里，最后是工具内置默认）
+      # config:
+      #   port: 3080
+      #   host: 127.0.0.1

@@ -1,0 +1,7 @@
+# 本地开发用的 peer 依赖联接（指向 $DSH_HOME/profiles/node_modules/@deepseek-ai）
+node_modules/
+
+# 测试/运行产物
+*.log
+test/tmp/
+.dsh-port-doctor-*.json
